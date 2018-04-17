@@ -1,0 +1,14 @@
+==========++++++++++==========
+./MavenBatch/MavenHonkEJBModule/src/main/resources/META-INF/ibm-ejb-jar-bnd.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar-bnd xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://websphere.ibm.com/xml/ns/javaee"
+    xsi:schemaLocation="http://websphere.ibm.com/xml/ns/javaee http://websphere.ibm.com/xml/ns/javaee/ibm-ejb-jar-bnd_1_0.xsd"
+    version="1.0">
+  <session name="BatchJobHonkBatchController" simple-binding-name="ejb/BatchJobHonkBatchController">
+    <resource-ref name="wm/BatchWorkManager" binding-name="wm/default"/>
+    <resource-ref name="url/BatchJobHonkBatch_log4j.propertiesRef" binding-name="url/BatchJobHonkBatch_log4j.properties"/>
+  </session>
+
+</ejb-jar-bnd>
+
+

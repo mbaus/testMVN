@@ -1,0 +1,6 @@
+==========++++++++++==========
+./MavenBatch/MavenHonkEJBModule/src/main/resources/META-INF/MANIFEST.MF
+Manifest-Version: 1.0
+Class-Path: MavenHonkLogic.jar
+
+

@@ -1,0 +1,31 @@
+==========++++++++++==========
+./MavenBatch/MavenHonkEJBModule/src/main/resources/META-INF/ejb-jar.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar id="ejb-jar_ID" version="3.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd">
+	<display-name>MavenHonkEJB</display-name>
+	<enterprise-beans>
+		<session>
+			<ejb-name>BatchJobHonkBatchController</ejb-name>
+			<home>com.ibm.ws.batch.BatchJobControllerHome</home>
+			<remote>com.ibm.ws.batch.BatchJobController</remote>
+			<ejb-class>com.ibm.ws.batch.BatchJobControllerBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<init-on-startup>false</init-on-startup>
+			<transaction-type>Container</transaction-type>
+			<resource-ref>
+				<res-ref-name>wm/BatchWorkManager</res-ref-name>
+				<res-type>commonj.work.WorkManager</res-type>
+				<res-auth>Container</res-auth>
+				<res-sharing-scope>Shareable</res-sharing-scope>
+			</resource-ref>
+			<resource-ref>
+                <description />
+                <res-ref-name>url/BatchJobHonkBatch_log4j.propertiesRef</res-ref-name>
+                <res-type>java.net.URL</res-type>
+                <res-auth>Application</res-auth>
+                <res-sharing-scope>Shareable</res-sharing-scope>
+            </resource-ref>
+		</session>
+	</enterprise-beans>
+</ejb-jar>
+
